@@ -13,7 +13,7 @@ var baseCircle = {
 					baseStats: [1, 1, true, false],
 					in: [],
 					out: [
-						["Stamina", 0.01, 1000],
+						["Stamina", 1, 1000],
 					],
 					lock: [],
 					alwayson: true,
