@@ -30,7 +30,7 @@ var baseCircle = {
 					baseStats: [1, 1, true, false],
 					in: [],
 					out: [
-						["Mana", 0.001, 1000],
+						["Mana", 1, 1000],
 					],
 					lock: ["Home", 0.5],
 					alwayson: true,
