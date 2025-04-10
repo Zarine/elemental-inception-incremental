@@ -1,4 +1,37 @@
 var simplifiedMachineData = {};
+var testCircle = { 
+  elements: ["Grass", "Herbivor", "Carnivor"],
+  machines:
+  {
+    'Grass':
+    {
+      baseStats: [-1400, -300, "Grass"],
+      recipes:
+      {
+        "Kick start":
+        {
+          baseStats: [1, 1, true, false],
+					in: [],
+					out: [
+						["Grass", 0.1, 1],
+					],
+					lock: [],
+        },
+        "Grow":
+        {
+          baseStats: [1, 1, true, false],
+					in: [
+						["Grass", 1.0, 0.1],
+					],
+					out: [
+						["Grass", 1.01, 1e4]
+					],
+					lock: ["Grass", 1],
+        },
+      }
+    }
+  }
+}
 var baseCircle = {
 	elements: ["Stamina", "Currency", "Mana", "Resolve", "Body", "Mind", "Soul"],
 	machines:
@@ -3945,6 +3978,7 @@ function preprocessAdditionalCircles() {
 	{
 		return;
 	}
+  testCircle.preprocess();
 	reachCircle.preprocess();
 	baseCircle.preprocess();
 	materialCircle.preprocess();
